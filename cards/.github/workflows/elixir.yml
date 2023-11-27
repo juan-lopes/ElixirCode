@@ -36,6 +36,7 @@ jobs:
     - name: Install dependencies
         run: |
           cd ../../
+          ls
           mix deps.get
     - name: Run tests
       run: mix test
