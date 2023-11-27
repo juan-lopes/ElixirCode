@@ -34,8 +34,9 @@ jobs:
           restore-keys: ${{ runner.os }}-mix-
       - name: Install dependencies
         run: |
-          ls
           cd ./cards/
           mix deps.get
       - name: Run tests
-        run: mix test
+        run: |
+          cd ./cards/
+          mix test
