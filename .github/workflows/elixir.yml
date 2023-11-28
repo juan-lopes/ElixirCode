@@ -33,22 +33,22 @@ jobs:
           key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
           restore-keys: ${{ runner.os }}-mix-
       - name: Install dependencies
-    - name: Install dependencies for first project
-      run: |
-        cd ./cards/
-        mix deps.get
-
-    - name: Run tests for first project
-      run: |
-        cd ./cards/
-        mix test
-
-    - name: Install dependencies for second project
-      run: |
-        cd ../identicon/
-        mix deps.get
-
-    - name: Run tests for second project
-      run: |
-        cd ../identicon/
-        mix test
+      - name: Install dependencies for first project
+        run: |
+          cd ./cards/
+          mix deps.get
+  
+      - name: Run tests for first project
+        run: |
+          cd ./cards/
+          mix test
+  
+      - name: Install dependencies for second project
+        run: |
+          cd ../identicon/
+          mix deps.get
+  
+      - name: Run tests for second project
+        run: |
+          cd ../identicon/
+          mix test
