@@ -40,6 +40,8 @@ jobs:
 
       - name: Install dependencies for second project
         run: |
+          cd ..
+          ls
           cd ../identicon/
           mix deps.get
 
