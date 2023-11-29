@@ -40,12 +40,10 @@ jobs:
 
       - name: Install dependencies for second project
         run: |
-          cd ..
-          ls
-          cd ../identicon/
+          cd ./identicon/
           mix deps.get
 
       - name: Run tests for second project
         run: |
-          cd ../identicon/
+          cd ./identicon/
           mix test
